@@ -1,13 +1,15 @@
 [{if $linenr == 0 }]
-id	title	link	price	description	condition	gtin	image_link	product_type<br>
+id	title	link	price	availability	description	condition	gtin	image_link	product_type	google_product_category<br>
 [{/if}]
 
 [{$article->oxarticles__oxartnum->value}]	[{* Artikelnummer *}]
 [{$article->oxarticles__oxtitle->value}]	[{* Artikelbezeichnung *}]
 [{$article->getLink()|replace:"&amp;":"&"}]	[{* Artikellink *}]
 [{$article->brutPrice}]	[{* Preis *}]
+in stock	[{* Verfügbarkeit*}]
 [{$article->oxarticles__oxlongdesc->value}]	[{* Artikelbeschreibung *}]
-Neu	[{* Zustand *}]
+new	[{* Zustand *}]
 [{$article->oxarticles__oxean->value}]	[{* EAN-Code *}]
 [{$sPictureUrl}]	[{* Bild-URL *}]
 Möbel	[{* Produktart *}]
+Möbel[{* Google Produkt Kategorie *}]
